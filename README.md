@@ -11,3 +11,4 @@ Generate abacus practice sheets with hidden answers.
 - Google fonts.
 - webpack + hot module replacement.
 - Use CSS Grid.
+- Use AWS Lambda function to generate sheet data. This is over the top  over engineering, but good for practice
