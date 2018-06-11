@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin') // For generating the html index page.
-const ExtractTextPlugin = require('extract-text-webpack-plugin') // For processing CSS.
 const CleanWebpackPlugin = require('clean-webpack-plugin') // For cleaning out the output folder.
+const MiniCssExtractPlugin = require('mini-css-extract-plugin') // Unbundle the CSS after bundling - (TODO: why?)
 
 module.exports = {
     entry: [
@@ -13,8 +13,8 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['dist']), 
-        new ExtractTextPlugin(
-            {filename: './css/style.css'}
+        new MiniCssExtractPlugin(
+            {filename: './css/styles.css'}
         ),
         new HtmlWebpackPlugin({
             inject: false,
@@ -27,15 +27,15 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract(
-                    {
-                        fallback: 'style-loader',
-                        use: ['css-loader']
-                    })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
             }
         ]
     },
     devServer: {
         contentBase: './dist' // Tell webpack-dev-server where to serve content from.
-    }
+    },
+    devtool: 'cheap-module-eval-source-map'
 }
