@@ -5,13 +5,13 @@ Generate abacus practice sheets with hidden answers.
 ## Goals
 
 - [ ] Support:
- - [ ] multiplication, 
- - [ ] addition, 
- - [ ] subtraction.
- - [ ] toggling of carrying.
- - [ ] history, 
- - [ ] difficulty control, 
- - [ ] scoring.
+  - [ ] multiplication, 
+  - [ ] addition, 
+  - [ ] subtraction.
+  - [ ] toggling of carrying.
+  - [ ] history, 
+  - [ ] difficulty control, 
+  - [ ] scoring.
 - [x] React cell, column, table.
 - [ ] Google fonts.
 - [x] Webpack + hot module replacement.
