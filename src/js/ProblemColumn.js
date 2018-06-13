@@ -1,17 +1,28 @@
 import React from 'react'
-import {Digits} from './Digits'
+import {Digit} from './Digit'
+import {Label} from './Label'
 
 export class ProblemColumn extends React.Component {
     render() {
         let arr = [
             'div',
             {className: 'problem-column'},
-            '',
-            React.createElement(Digits, {sign: '-', value: '10'}, null),
-            React.createElement(Digits, {sign: '-', value: '11'}, null),
-            React.createElement(Digits, {sign: '-', value: '12'}, null),
-            React.createElement(Digits, {sign: '-', value: '99'}, null)
+            ''
         ]
+        this.props.numberColumn.forEach((columnCell) => {
+            let sign
+            let value
+            let element
+            if (typeof columnCell === 'number') {
+                sign = (columnCell < 0) ? '-' : ''
+                value = Math.abs(columnCell)
+                element = React.createElement(Digit, {sign: sign, value: value}, null)
+            } else if (typeof columnCell === 'string') {
+                element = React.createElement(Label, {label: columnCell}, null)
+            }
+            arr.push(element)
+        })
+
         return React.createElement.apply(this, arr)
     }
 }

@@ -6,11 +6,12 @@ export class ProblemBank extends React.Component {
         let arr = [
             'div',
             {className: 'problem-bank'},
-            '',
-            React.createElement(ProblemColumn, null, null),
-            React.createElement(ProblemColumn, null, null),
-            React.createElement(ProblemColumn, null, null),
+            ''
         ]
+        this.props.numbers.forEach( (numberColumn) => {
+            arr.push(React.createElement(ProblemColumn, {numberColumn: numberColumn}, null))
+        })
+
         return React.createElement.apply(this, arr)
     }
 }

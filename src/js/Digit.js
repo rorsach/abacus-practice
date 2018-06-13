@@ -1,9 +1,9 @@
 import React from 'react'
-export class Digits extends React.Component {
+export class Digit extends React.Component {
     render() {
         return React.createElement(
             'div',
-            {className: 'problem-digits'},
+            {className: 'problem-cell problem-digit'},
             `${this.props.sign} ${this.props.value}`
         )
     }

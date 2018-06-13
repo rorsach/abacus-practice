@@ -1,23 +1,41 @@
 .problem-bank {
     display: flex;
-    border: 1px solid fefeff;
+    border: 3px solid #000;
 }
 
-.problem-digits {
-    border: 1px solid #ffefe;
+.problem-cell {
+        border: 1px solid #333;
+}
+
+.problem-digit {
     width: 100%;
     height: 1.6rem;
     text-align: right;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    
+}
+
+.problem-label {
+    width: 100%;
+    height: 1.6rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .problem-column {
     display: flex;
-    width: 100px;
+    max-width: 30px;
     border: 1px solid fefffe;
     flex-direction: column;
+}
+
+.problem-column ~ .problem-column {
+    max-width: 100%;
+    min-width: 100px;
 }
 
 .wrapper {
