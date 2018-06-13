@@ -20,7 +20,10 @@ export class ProblemColumn extends React.Component {
             } else if (typeof columnCell === 'string') {
                 element = React.createElement(Label, {label: columnCell}, null)
             }
-            arr.push(element)
+
+            if (element) {
+                arr.push(element)
+            }
         })
 
         return React.createElement.apply(this, arr)
