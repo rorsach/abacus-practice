@@ -6,7 +6,7 @@ html {
 }
 
 html, body {
-    font-family: 'Source Serif Pro', serif;
+    font-family: Times New Roman, Georgia, serif;
 }
 
 .problem-bank {
@@ -28,6 +28,8 @@ html, body {
     justify-content: flex-end;
     font-style: italic;
     font-size: 1.25rem;
+    border-top: 0;
+    border-bottom: 0;
     
 }
 
