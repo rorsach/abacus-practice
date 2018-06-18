@@ -8,7 +8,13 @@ https://en.wikipedia.org/wiki/Soroban
 
 ## Installation
 
-Clone the repo and run:
+Clone the repo and install dependencies with npm:
+
+```
+npm install
+```
+
+To start the development server for testing run this command.
 
 ```
 npm start
