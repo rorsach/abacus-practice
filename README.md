@@ -2,6 +2,8 @@
 
 Generate abacus practice sheets with hidden answers.
 
+https://en.wikipedia.org/wiki/Soroban
+
 ![Example abacus practice sheet](practice-sheet-example.png)
 
 ## Installation
@@ -19,12 +21,12 @@ A webpack-dev-server will start up and live update any changes to the code in th
 ## Goals
 
 - [ ] Support:
-  - [ ] multiplication, 
-  - [ ] addition, 
+  - [ ] multiplication.
+  - [ ] addition.
   - [ ] subtraction.
   - [ ] toggling of carrying.
-  - [ ] history, 
-  - [ ] difficulty control, 
+  - [ ] history.
+  - [ ] difficulty control.
   - [ ] scoring.
 - [x] React cell, column, table.
 - [x] Google fonts.
