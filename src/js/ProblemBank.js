@@ -8,7 +8,7 @@ export class ProblemBank extends React.Component {
             {className: 'problem-bank'},
             ''
         ]
-        this.props.numbers.forEach( (numberColumn) => {
+        this.props.problemBank.forEach( (numberColumn) => {
             arr.push(React.createElement(ProblemColumn, {numberColumn: numberColumn}, null))
         })
 

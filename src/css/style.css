@@ -12,6 +12,7 @@ html, body {
 .problem-bank {
     display: flex;
     border: 3px solid #000;
+    margin-bottom: 1.0rem;
 }
 
 .problem-cell {

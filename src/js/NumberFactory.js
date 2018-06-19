@@ -45,7 +45,7 @@ export class NumberFactory {
             }
         }
 
-        return output[0]
+        return output
     }
 
     randomRangeInt(min, max) {
