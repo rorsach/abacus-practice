@@ -5,7 +5,7 @@ import {NumberFactory} from './NumberFactory'
 import {ProblemPage} from './ProblemPage'
 import '../css/style.css'
 
-var numbers = new NumberFactory(2, 7, 16).generateNumbers()
+let numbers = new NumberFactory(3, 7, 8).generateNumbers()
 
 
 ReactDOM.render(

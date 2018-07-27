@@ -8,13 +8,17 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
-        <div id="configMenu">
-            <form action="get">
-                
-            </form>            
+        <div id="configMenu" class="menuOff">
+            Configuration menu controls go here.
         </div>
-        
         <div id="root"></div>
-        <script src="bundle.js" ></script>
+        <script src="bundle.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function (event) {
+                console.log('onload')
+                configMenu.classList.add('menuOn')
+            });
+         let configMenu = document.getElementById('configMenu')
+        </script>
     </body>
 </html>
