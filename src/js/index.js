@@ -20,7 +20,16 @@ ReactDOM.render(
         // TODO: Add headers and footers to the data structure passed in to page.
         // TODO: Allow users to pick layouts based on the intended task, such as multiplications layouts.
       
-        React.createElement(ProblemPage, {numbers: numbers}, null)
+        React.createElement(ProblemPage, {numbers: numbers.output}, null)
     ),
     document.getElementById('root')
+)
+
+ReactDOM.render(
+    React.createElement(
+        'p',
+        {},
+        'seed:' + numbers.seed
+    ),
+    document.getElementById('seed')
 )

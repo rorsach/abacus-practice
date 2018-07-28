@@ -1,6 +1,8 @@
+import seedrandom from 'seedrandom'
 export class NumberFactory {
 
     constructor(options) {
+        console.log('seedrandom', seedrandom)
         this.columns = options.columns
         this.rows = options.rows
         this.banks = options.banks
@@ -8,9 +10,12 @@ export class NumberFactory {
         this.result1 = 'result#1'
         this.result2 = 'result#2'
         this.MAX_RESULT = 100
+        this.initialSeed = seedrandom('1')()
+        this.seedCount = 0 + this.initialSeed
     }
     
     generateNumbers() {
+        let numbers = {}
         let output = []
         for (let bank = 0; bank < this.banks; bank++) {
             output[bank] = []
@@ -59,11 +64,13 @@ export class NumberFactory {
             }
         }
 
-        return output
+        numbers.seed = this.initialSeed
+        numbers.output = output
+        return numbers
     }
 
     randomRangeInt(min, max) {
-        return Math.floor(Math.random() * (1 + max - min) + min)
+        return Math.floor(seedrandom(this.seedCount++)() * (1 + max - min) + min)
     }
     
 }
