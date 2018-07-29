@@ -62,6 +62,7 @@ html, body {
 
 .answer-page {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #configMenu {
