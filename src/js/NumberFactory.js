@@ -36,7 +36,7 @@ export class NumberFactory {
                     } else if (column === 0) {
                         output[bank][column][row] = '' + row
                     } else if (row === 0) {
-                        output[bank][column][row] = '' + column
+                        output[bank][column][row] = column + row + -1 + ''
                     } else {
                         output[bank][column][row] = this.randomRangeInt(1, 100)
                     }
