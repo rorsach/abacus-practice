@@ -28,12 +28,16 @@ A webpack-dev-server will start up and live update any changes to the code in th
 
 - [ ] Support:
   - [ ] multiplication.
-  - [ ] addition.
-  - [ ] subtraction.
+  - [x] addition.
+  - [x] subtraction.
   - [ ] toggling of carrying.
   - [ ] history.
   - [ ] difficulty control.
   - [ ] scoring.
+  - [ ] timers, stopwatch.
+  - [ ] alarms.
+  - [ ] dialog for encouragement.
+  - [ ] pagination, react native swiping for mobile support. Allow users to swipe between problem sets.
 - [x] React cell, column, table.
 - [x] Google fonts.
 - [x] Webpack + hot module replacement.
