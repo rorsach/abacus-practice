@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {NumberFactory} from './NumberFactory'
 import {ProblemPage} from './ProblemPage'
+import {AnswerPage} from './AnswerPage'
 import '../css/style.css'
 
 let options = {
@@ -32,4 +33,15 @@ ReactDOM.render(
         'seed:' + numbers.seed
     ),
     document.getElementById('seed')
+)
+
+
+ReactDOM.render(
+    React.createElement(
+        'div',
+        {className: 'problem-root'},
+      
+        React.createElement(AnswerPage, {answers: numbers.answers}, null)
+    ),
+    document.getElementById('answers')
 )

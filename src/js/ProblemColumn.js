@@ -13,6 +13,7 @@ export class ProblemColumn extends React.Component {
             let sign
             let value
             let element
+
             if (typeof columnCell === 'number') {
                 sign = (columnCell < 0) ? '-' : ''
                 value = Math.abs(columnCell)

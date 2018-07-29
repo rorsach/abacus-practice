@@ -2,7 +2,6 @@ import seedrandom from 'seedrandom'
 export class NumberFactory {
 
     constructor(options) {
-        console.log('seedrandom', seedrandom)
         this.columns = options.columns
         this.rows = options.rows
         this.banks = options.banks
@@ -15,8 +14,13 @@ export class NumberFactory {
     }
     
     generateNumbers() {
-        let numbers = {}
+        let numbers = {
+            seed: null,
+            output: [],
+            answers: []
+        }
         let output = []
+        let columnNumber = 0; // Start column numbering at
         for (let bank = 0; bank < this.banks; bank++) {
             output[bank] = []
             
@@ -36,12 +40,13 @@ export class NumberFactory {
                         if (column === 0) {
                             output[bank][column][row] = this.result2
                         } else {
-                            output[bank][column][row] = ''
+                            output[bank][column][row] = '' + subtotal
+                            numbers.answers.push(subtotal)
                         }
                     } else if (column === 0) {
-                        output[bank][column][row] = '' + row
+                        output[bank][column][row] = '' + row // ROW Numbering
                     } else if (row === 0) {
-                        output[bank][column][row] = column + row + -1 + ''
+                        output[bank][column][row] = ++columnNumber + '' // COLUMN Numbering
                     } else {
                         // Don't allow negative totals.
                         let currentDigit
@@ -53,19 +58,20 @@ export class NumberFactory {
                             maxDigit = 0
                         } else {
                             minDigit = -subtotal
-                            maxDigit = 100
+                            maxDigit = this.MAX_RESULT
                         }
                         currentDigit = this.randomRangeInt(minDigit, maxDigit) 
                         subtotal = subtotal + currentDigit
+                        output[bank][column][row] = ''
                         output[bank][column][row] = currentDigit
                     }
                 }
-                
             }
         }
 
         numbers.seed = this.initialSeed
         numbers.output = output
+        console.log('NumberFactory:numbers:', numbers)
         return numbers
     }
 

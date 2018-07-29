@@ -60,6 +60,9 @@ html, body {
     flex: 1;
 }
 
+.answer-page {
+    display: flex;
+}
 
 #configMenu {
     position: fixed;
