@@ -40,7 +40,7 @@ export class NumberFactory {
                         if (column === 0) {
                             output[bank][column][row] = this.result2
                         } else {
-                            output[bank][column][row] = '' + subtotal
+                            output[bank][column][row] = ''
                             numbers.answers.push(subtotal)
                         }
                     } else if (column === 0) {
