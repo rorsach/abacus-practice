@@ -6,7 +6,7 @@ export class AnswerColumn extends React.Component {
     render() {
         let arr = [
             'div',
-            {className: 'problem-column'},
+            {className: 'answer-column'},
             ''
         ]
         let sign = ''

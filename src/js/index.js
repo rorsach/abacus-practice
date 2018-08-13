@@ -8,7 +8,7 @@ import '../css/style.css'
 
 let options = {
     banks: 5, // the number of problem sets per page.
-    columns: 7, // The number of columns per problem set.
+    columns: 11, // The number of columns per problem set.
     rows: 7, // The number of rows, currently, including two result rows TODO: break this parameter into two, one for results rows and one for digit rows.
 }
 let numbers = new NumberFactory(options).generateNumbers()

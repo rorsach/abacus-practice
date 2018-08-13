@@ -61,8 +61,15 @@ html, body {
 }
 
 .answer-page {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+.answer-column {
+    display: inline-block;
+    width: 10%;
+    margin-bottom: 1.0rem;
+    border-bottom: 1px solid black;
 }
 
 #configMenu {

@@ -6,10 +6,10 @@ export class NumberFactory {
         this.rows = options.rows
         this.banks = options.banks
         this.numberHeading = 'No.' // TODO move these texts to a resource file options object
-        this.result1 = 'result#1'
-        this.result2 = 'result#2'
+        this.result1 = '#'
+        this.result2 = '##'
         this.MAX_RESULT = 100
-        this.initialSeed = seedrandom('1')()
+        this.initialSeed = seedrandom('6')()
         this.seedCount = 0 + this.initialSeed
     }
     
