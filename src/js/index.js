@@ -4,15 +4,25 @@ import ReactDOM from 'react-dom'
 import {NumberFactory} from './NumberFactory'
 import {ProblemPage} from './ProblemPage'
 import {AnswerPage} from './AnswerPage'
+import {ProblemConfigForm} from './ProblemConfigForm'
 import '../css/style.css'
 
 let options = {
-    banks: 5, // the number of problem sets per page.
+    banks: 3, // the number of problem sets per page.
     columns: 11, // The number of columns per problem set.
-    rows: 7, // The number of rows, currently, including two result rows TODO: break this parameter into two, one for results rows and one for digit rows.
+    rows: 12, // The number of rows, currently, including two result rows TODO: break this parameter into two, one for results rows and one for digit rows.
 }
 let numbers = new NumberFactory(options).generateNumbers()
 
+// Test out form creation and event passing.
+ReactDOM.render(
+    React.createElement(
+        'div',
+        {className: 'problemConfigForm-root'},
+        React.createElement(ProblemConfigForm, null, null)
+    ),
+    document.getElementById('problemConfigForm')
+)
 
 ReactDOM.render(
     React.createElement(

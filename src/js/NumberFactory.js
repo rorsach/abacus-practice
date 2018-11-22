@@ -9,7 +9,7 @@ export class NumberFactory {
         this.result1 = '#'
         this.result2 = '##'
         this.MAX_RESULT = 100
-        this.initialSeed = seedrandom('6')()
+        this.initialSeed = seedrandom('8')()
         this.seedCount = 0 + this.initialSeed
     }
     
