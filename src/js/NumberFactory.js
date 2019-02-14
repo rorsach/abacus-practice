@@ -12,8 +12,8 @@ export class NumberFactory {
         this.initialSeed = seedrandom('8')()
         this.seedCount = 0 + this.initialSeed
     }
-    
-    generateNumbers() {
+
+    generateSums() {
         let numbers = {
             seed: null,
             output: [],
@@ -44,15 +44,14 @@ export class NumberFactory {
                             numbers.answers.push(subtotal)
                         }
                     } else if (column === 0) {
-                        output[bank][column][row] = '' + row // ROW Numbering
+                        output[bank][column][row] = '' + row // ROW Number label
                     } else if (row === 0) {
-                        output[bank][column][row] = ++columnNumber + '' // COLUMN Numbering
+                        output[bank][column][row] = ++columnNumber + '' // COLUMN Number label
                     } else {
-                        // Don't allow negative totals.
                         let currentDigit
                         let maxDigit
                         let minDigit
-                        // digit can't be less than negative subtotal.
+                        // Digit can't be less than negative subtotal.
                         if (subtotal > this.MAX_RESULT) {
                             minDigit = -this.MAX_RESULT
                             maxDigit = 0

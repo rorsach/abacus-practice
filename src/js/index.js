@@ -12,7 +12,7 @@ let options = {
     columns: 11, // The number of columns per problem set.
     rows: 12, // The number of rows, currently, including two result rows TODO: break this parameter into two, one for results rows and one for digit rows.
 }
-let numbers = new NumberFactory(options).generateNumbers()
+let numbers = new NumberFactory(options).generateSums()
 
 // Test out form creation and event passing.
 ReactDOM.render(
